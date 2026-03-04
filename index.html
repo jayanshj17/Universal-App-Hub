@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🚀 Universal App Hub</title>
+    
+    <!-- ADD THIS LINE BELOW TITLE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+    <div class="loader-content">
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+        <div id="loadPercent">Initializing Interface...</div>
+        <h2>🚀 Universal App Hub...</h2>
+    </div>
+</div>
+
+<div class="topbar">
+    <div class="logo">
+        <h2>🚀 Universal App Hub...</h2>
+    </div>
+</div>
+
+<div class="search-container">
+    <input type="text" id="appSearch" placeholder="🔍 Search applications..." onkeyup="searchApps()">
+</div>
+
+<div id="scrollProgress"></div>
+
+<div class="desktop">
+
+<!-- Row 1 -->
+<div class="app" onclick="openApp('https://youtube.com')">
+<img src="https://img.icons8.com/color/96/youtube-play.png"><span>YouTube</span></div>
+
+<div class="app" onclick="openApp('https://web.whatsapp.com')">
+<img src="https://img.icons8.com/color/96/whatsapp.png"><span>WhatsApp</span></div>
+
+<div class="app" onclick="openApp('https://business.whatsapp.com')">
+    <img src="https://cdn.simpleicons.org/whatsapp/25D366">
+    <span>WhatsApp Business</span>
+</div>
+
+<div class="app" onclick="openApp('https://facebook.com')">
+<img src="https://img.icons8.com/color/96/facebook.png"><span>Facebook</span></div>
+
+<div class="app" onclick="openApp('https://instagram.com')">
+<img src="https://img.icons8.com/color/96/instagram-new.png"><span>Instagram</span></div>
+
+<div class="app" onclick="openApp('https://twitter.com')">
+<img src="https://img.icons8.com/color/96/twitter.png"><span>Twitter</span></div>
+
+<div class="app" onclick="openApp('https://web.telegram.org')">
+<img src="https://img.icons8.com/color/96/telegram-app.png"><span>Telegram</span></div>
+
+<div class="app" onclick="openApp('https://spotify.com')">
+<img src="https://img.icons8.com/color/96/spotify.png"><span>Spotify</span></div>
+
+<!-- Row 2 SAME -->
+<div class="app" onclick="openApp('https://netflix.com')">
+<img src="https://img.icons8.com/color/96/netflix.png"><span>Netflix</span></div>
+
+<div class="app" onclick="openApp('https://github.com')">
+<img src="https://img.icons8.com/ios-glyphs/96/ffffff/github.png"><span>GitHub</span></div>
+
+<div class="app" onclick="openApp('https://drive.google.com')">
+<img src="https://img.icons8.com/color/96/google-drive.png"><span>Google Drive</span></div>
+
+<div class="app" onclick="openApp('https://docs.google.com')">
+<img src="https://img.icons8.com/color/96/google-docs.png"><span>Google Docs</span></div>
+
+<div class="app" onclick="openApp('https://mail.google.com')">
+<img src="https://img.icons8.com/color/96/gmail-new.png"><span>Gmail</span></div>
+
+<div class="app" onclick="openApp('https://calendar.google.com')">
+<img src="https://img.icons8.com/color/96/google-calendar.png"><span>Google Calendar</span></div>
+
+<div class="app" onclick="openApp('https://maps.google.com')">
+<img src="https://img.icons8.com/color/96/google-maps.png"><span>Google Maps</span></div>
+
+<div class="app" onclick="openApp('https://translate.google.com')">
+<img src="https://img.icons8.com/color/96/google-translate.png"><span>Google Translate</span></div>
+
+<!-- Row 3 -->
+<div class="app" onclick="openApp('https://amazon.com')">
+<img src="https://img.icons8.com/color/96/amazon.png"><span>Amazon</span></div>
+
+<div class="app" onclick="openApp('https://flipkart.com')">
+<img src="https://cdn.worldvectorlogo.com/logos/flipkart.svg" style="width:115px; height:auto;">
+<span>Flipkart</span></div>
+
+<div class="app" onclick="openApp('https://reddit.com')">
+    <img src="https://cdn.simpleicons.org/reddit/FF4500">
+    <span>Reddit</span>
+</div>
+
+<div class="app" onclick="openApp('https://news.google.com')">
+<img src="https://img.icons8.com/color/96/google-news.png"><span>Google News</span></div>
+
+<div class="app" onclick="openApp('https://snapchat.com')">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/512px-Snapchat_logo.svg.png">
+    <span>Snapchat</span>
+</div>
+
+<div class="app" onclick="openApp('https://linkedin.com')">
+<img src="https://img.icons8.com/color/96/linkedin.png"><span>LinkedIn</span></div>
+
+<div class="app" onclick="openApp('https://behance.net')">
+<img src="https://img.icons8.com/color/96/behance.png"><span>Behance</span></div>
+
+<div class="app" onclick="openApp('https://canva.com')">
+<img src="https://img.icons8.com/color/96/canva.png"><span>Canva</span></div>
+
+<!-- Row 4 -->
+<div class="app" onclick="openApp('https://skype.com')">
+<img src="https://img.icons8.com/color/96/skype.png"><span>Skype</span></div>
+
+<div class="app" onclick="openApp('https://mozilla.org')">
+<img src="https://img.icons8.com/color/96/firefox.png"><span>Firefox</span></div>
+
+<div class="app" onclick="openApp('https://google.com/chrome')">
+<img src="https://img.icons8.com/color/96/chrome.png"><span>Chrome</span></div>
+
+<div class="app" onclick="openApp('https://microsoft.com/edge')">
+<img src="https://img.icons8.com/color/96/ms-edge-new.png"><span>Microsoft Edge</span></div>
+
+<div class="app" onclick="openApp('https://wikipedia.org')">
+<img src="https://img.icons8.com/color/96/wikipedia.png"><span>Wikipedia</span></div>
+
+<div class="app" onclick="openApp('https://paytm.com')">
+<img src="https://img.icons8.com/color/96/paytm.png"><span>Paytm</span></div>
+
+<div class="app" onclick="openApp('https://phonepe.com')">
+<img src="https://img.icons8.com/color/96/phone-pe.png" style="width:110px;">
+<span>PhonePe</span>
+    </div>
+
+<div class="app" onclick="openApp('https://unacademy.com')">
+<img src="https://img.icons8.com/color/96/graduation-cap.png"><span>Unacademy</span></div>
+
+<div class="app" onclick="openApp('https://chat.openai.com')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg">
+<span>ChatGPT</span></div>
+
+<div class="app" onclick="openApp('https://khanacademy.org')">
+<img src="https://img.icons8.com/color/96/khan-academy.png">
+<span>Khan Academy</span></div>
+
+<div class="app" onclick="openApp('https://grammarly.com')">
+<img src="https://img.icons8.com/color/96/grammarly.png"><span>Grammarly</span></div>
+
+<div class="app" onclick="openApp('https://notion.so')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png">
+<span>Notion</span></div>
+
+<div class="app" onclick="openApp('https://missionjeet.in')">
+     <img src="https://missionjeet.in/favicon.ico">
+    <span>Mission JEET</span></div>
+
+<div class="app" onclick="openApp('https://nexttoppers.com')">
+    <img src="https://www.google.com/s2/favicons?sz=128&domain=nexttoppers.com">
+    <span>Next Toppers</span></div>
+
+<div class="app" onclick="openApp('https://gemini.google.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=gemini.google.com">  
+    <span>Gemini</span></div>
+
+<div class="app" onclick="openApp('https://www.perplexity.ai')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=perplexity.ai">
+    <span>Perplexity</span></div>
+
+<div class="app" onclick="openApp('https://claude.ai')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=claude.ai">
+    <span>Claude</span></div>
+
+<div class="app" onclick="openApp('https://grok.x.ai')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=grok.x.ai">
+    <span>Grok</span></div>
+
+<div class="app" onclick="openApp('https://midjourney.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=midjourney.com">
+    <span>Midjourney</span></div>
+
+<div class="app" onclick="openApp('https://character.ai')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=character.ai">
+    <span>Character AI</span></div>
+
+<div class="app" onclick="openApp('https://indeed.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=indeed.com">
+    <span>Indeed</span></div>
+
+<div class="app" onclick="openApp('https://trello.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=trello.com">
+    <span>Trello</span></div>
+
+<div class="app" onclick="openApp('https://slack.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=slack.com">
+    <span>Slack</span></div>
+
+<div class="app" onclick="openApp('https://zoom.us')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=zoom.us">
+    <span>Zoom</span></div>
+
+<div class="app" onclick="openApp('https://disneyplus.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=disneyplus.com">
+    <span>Disney+</span></div>
+
+<div class="app" onclick="openApp('https://primevideo.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=primevideo.com">
+    <span>Prime Video</span></div>
+
+<div class="app" onclick="openApp('https://epicgames.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=epicgames.com">
+    <span>Epic Games</span></div>
+
+<div class="app" onclick="openApp('https://steamcommunity.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=steampowered.com">
+    <span>Steam</span></div>
+
+<div class="app" onclick="openApp('https://byjus.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=byjus.com">
+    <span>BYJU'S</span></div>
+
+<div class="app" onclick="openApp('https://pw.live')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=pw.live">
+    <span>Physics Wallah</span></div>
+
+<div class="app" onclick="openApp('https://vedantu.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=vedantu.com">
+    <span>Vedantu</span></div>
+
+<div class="app" onclick="openApp('https://coursera.org')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=coursera.org">
+    <span>Coursera</span></div>
+
+<div class="app" onclick="openApp('https://www.pinterest.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=pinterest.com">
+    <span>Pinterest</span></div>
+
+<div class="app" onclick="openApp('https://www.playstation.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=playstation.com">
+    <span>PlayStation</span></div>
+
+<div class="app" onclick="openApp('https://www.xbox.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=xbox.com">
+    <span>Xbox</span></div>
+
+<div class="app" onclick="openApp('https://www.nintendo.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=nintendo.com">
+    <span>Nintendo</span></div>
+
+<div class="app" onclick="openApp('https://www.roblox.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=roblox.com">
+    <span>Roblox</span></div>
+
+<div class="app" onclick="openApp('https://www.minecraft.net')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=minecraft.net">
+    <span>Minecraft</span></div>
+
+<div class="app" onclick="openApp('https://pubg.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=pubg.com">
+    <span>PUBG</span></div>
+
+<div class="app" onclick="openApp('https://www.callofduty.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=callofduty.com">
+    <span>Call of Duty</span></div>
+
+<div class="app" onclick="openApp('https://ff.garena.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=garena.com">
+    <span>Free Fire</span></div>
+
+<div class="app" onclick="openApp('https://www.zomato.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=zomato.com">
+    <span>Zomato</span></div>
+
+<div class="app" onclick="openApp('https://www.swiggy.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=swiggy.com">
+    <span>Swiggy</span></div>
+
+<div class="app" onclick="openApp('https://discord.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=discord.com">
+    <span>Discord</span></div>
+
+<div class="app" onclick="openApp('https://stackoverflow.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=stackoverflow.com">
+    <span>Stack Overflow</span></div>
+
+<div class="app" onclick="openApp('https://codepen.io')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=codepen.io">
+    <span>CodePen</span></div>
+
+<div class="app" onclick="openApp('https://vercel.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=vercel.com">
+    <span>Vercel</span></div>
+
+<div class="app" onclick="openApp('https://huggingface.co')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=huggingface.co">
+    <span>Hugging Face</span></div>
+
+<div class="app" onclick="openApp('https://runwayml.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=runwayml.com">
+    <span>Runway</span></div>
+
+ <div class="app" onclick="openApp('https://www.jiocinema.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=jiocinema.com">
+    <span>JioCinema</span></div>   
+    
+<div class="app" onclick="openApp('https://groww.in')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=groww.in">
+    <span>Groww</span></div>
+
+<div class="app" onclick="openApp('https://zerodha.com')">
+    <img src="https://www.google.com/s2/favicons?sz=256&domain=zerodha.com">
+    <span>Zerodha</span></div>
+    
+</div>
+
+<button id="topBtn" onclick="topFunction()">⬆</button>
+<audio id="clickSound" src="click.mp3.wav"></audio>
+<script src="script.js"></script>
+
+<footer>
+      Universal App Hub v1.0 • Built by "Jayansh Joshi".
+</footer>
+
+</body>
+</html>

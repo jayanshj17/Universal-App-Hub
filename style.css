@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    overflow-x: hidden;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    background: rgba(15,23,42,0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 35px;
+}
+
+.search-container {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input {
+    width: 420px;
+    padding: 14px 22px;
+    border-radius: 40px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.search-container input:focus {
+    border: 1px solid #00f5ff;
+    box-shadow: 0 0 15px rgba(0,245,255,0.4);
+}
+
+.desktop {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 20px;
+}
+
+.app {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.app:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: rgba(0,255,255,0.12);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+}
+
+.app img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+#scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00f5ff, #00ff88);
+    width: 0%;
+    z-index: 2000;
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background: #00f5ff;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+    flex-direction: column;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+#loadPercent {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #00f5ff;
+    letter-spacing: 2px;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255,255,255,0.2);
+    border-top: 6px solid #00f5ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Circle Glow ONLY in Loader */
+#loader::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0,245,255,0.4), transparent 70%);
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+    filter: blur(60px);
+    animation: floatGlow 6s ease-in-out infinite alternate;
+}
+
+/* Smooth floating animation */
+@keyframes floatGlow {
+    from {
+        transform: translate(0px, 0px);
+    }
+    to {
+        transform: translate(40px, 40px);
+    }
+}
+
+.whatsapp-business {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.desktop {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    color: rgba(255,255,255,0.5);
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+
+    .topbar h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .app img {
+        width: 60px;
+    }
+
+    .app span {
+        font-size: 12px;
+    }
+
+    .filter-buttons {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
